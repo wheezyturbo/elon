@@ -83,7 +83,8 @@
 							<img class="png" src="./text.png" alt="">
 							<h2>We Are Getting Married</h2>
 							
-							<p><a href="#fh5co-couple" class="btn btn-default btn-sm">Scroll Down</a></p>
+							<p><a href="#fh5co-couple" class="btn btn-default btn-sm scroll-link">Scroll Down</a></p>
+
 						</div>
 					</div>
 				</div>
@@ -343,7 +344,27 @@
         day: d.getDate(),
         enableUtc: false
     });
+
+
+
+
+  
 </script>
+<script>
+	$(document).ready(function() {
+	  // Smooth scrolling for the scroll link
+	  $(".scroll-link").click(function(e) {
+		e.preventDefault();
+		$("body,html").animate(
+		  {
+			scrollTop: $(this.hash).offset().top
+		  },
+		  1000
+		);
+	  });
+	});
+	</script>
+	
 
 	</body>
 </html>
